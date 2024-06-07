@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt 
+plt.rcParams['font.family'] = "IPAPGothic"
 
 obj=pd.Series([4,7,-5,3])
 print(obj)
@@ -39,3 +41,27 @@ print(frame)
 frame2 =pd.DataFrame(data,columns=['year','state','pop'],index=['one','two','three','four','five','six'])
 print(frame2)
 print(frame2['pop'])
+
+
+
+
+
+# 二次曲線の作成
+x = np.linspace(-3,3)
+y = x**2
+  
+# 二次曲線のプロット作成
+plt.plot(x, y, label="二次曲線")
+ 
+# タイトル・軸ラベル表示
+plt.title("グラフタイトル")
+plt.xlabel("x軸ラベル名")
+plt.ylabel("y軸ラベル名")
+ 
+# グラフ内テキスト表示
+plt.text(0, 4,"テキスト例")
+ 
+# 凡例表示
+plt.legend()
+ 
+plt.show()
